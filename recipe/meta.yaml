@@ -14,7 +14,7 @@ build:
     - mv    arduino-cli-{{ version }}-alpha.preview-macosx  {{ PREFIX }}/bin/arduino-cli      [osx]
 
     - mkdir {{ SCRIPTS }}                                                                     [win]
-    - xcopy arduino-cli-{{ version }}-alpha.preview-win     {{ SCRIPTS }}\arduino-cli.exe     [win]
+    - xcopy arduino-cli-{{ version }}-alpha.preview-windows {{ SCRIPTS }}\arduino-cli.exe     [win]
 
 source:
   url: {{ url }}/{{ version }}-alpha.preview/arduino-cli-{{ version }}-alpha.preview-linux32.tar.bz2    [linux32]
