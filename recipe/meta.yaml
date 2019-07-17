@@ -26,7 +26,7 @@ source:
   url: {{ url }}/{{ version }}-alpha.preview/arduino-cli-{{ version }}-alpha.preview-macosx.zip         [osx]
   sha256: 236e601d95fb0ec54ee5c3162be982a7b83a7d05494dc833d291f4d8ee80e143                              [osx]
 
-  url: {{ url }}/{{ version }}-alpha.preview/arduino-cli-{{ version }}-alpha.preview-win.zip            [win]
+  url: {{ url }}/{{ version }}-alpha.preview/arduino-cli-{{ version }}-alpha.preview-windows.zip        [win]
   sha256: 32e24406b02019fa13126e8b8883f5c1c411660bf0cfc5b9c5ae9f68d54b7f6f                              [win]
 
 about:
