@@ -1,1 +1,17 @@
-[]
+travis:
+  secure:
+    BINSTAR_TOKEN: sQd1LxvjybbbcPUnrUCSLuNC9uAX5UTOycRuiew6EazcNcdKbKFsvug6/rha7K850m4xkfKqe3qcGVjFdUsenXjEsL5jnxz4M2pfNcVb0vlJQizyDyudB2q29TkP04fqKODc6VewwJH1P/JLYDdMlbBUHQ0pqd1juv6n8m4FX1OaeiFj+rmxzg7MDaEKJhbcNeeVO3S1ZN2m2f3MOZWl9wW6zCQDybxtVAaEbfWEC22xkSw/NZY1fb3ytxFMpmRGOfMiEooTg4OpY0CORKy8+rM7suKczB/f1eCk3LFEr7d0Z+B6ErGNphVxbBbxNgEon4jBx4z7JC+qmlCm/epbSSJWrZ9QRgPeH9JXNJr10D5q0/iy9uaYfhMe7RALNvirtWxE7mZfwnayGTiNbGkMzacyPo3aPVpMsrN/Dl3ozmfTf9/rjTM/tvoW7dMNHgyStRfp8FB8PH/KFkfJNrGTz5mc72qYz/Ky07tZAcSEOhuUGfb/9sf5U3VkpOpXaRt2d1oLMXqY9syy7iilLS/khm5Ayy6lkoTz8gRJIJOwajEsU147SPjF2RfyCHnJoUYNJK7jDwqICSXHHVauANGjJ5pnCkAe0+NspB+FlktjIixVeCIL2S/r9JCnU9K4GdBBX8Y9ZCRKiISSQCmBC3NYM+RdPgn55V+FHtZH7drZYbk=
+appveyor:
+  secure:
+    BINSTAR_TOKEN: qnTwQiGJBWgaW8Tb+rS3SXRTxJPbZJrEtADGdVzCqFn9SEcoewAV3jA/KOhhunFy
+github:
+  user_or_org: lantzproject
+channels:
+  targets:
+  - [hgrecco, main]
+provider:
+  linux: travis
+  osx: travis
+  win: appveyor
+  linux_ppc64le: None
+  linux_aarch64: None
