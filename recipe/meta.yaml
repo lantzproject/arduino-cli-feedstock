@@ -1,0 +1,39 @@
+{% set version = "0.3.7" %}
+{% set url = "https://github.com/arduino/arduino-cli/releases/download" %}
+
+package:
+  name: arduino-cli
+  version: {{ version }}
+
+build:
+  number: 0
+  script:
+    - mkdir -p {{ PREFIX }}/bin                                                               [not win]
+    - mv    arduino-cli-{{ version }}-alpha.preview-linux32 {{ PREFIX }}/bin/arduino-cli      [linux32]
+    - mv    arduino-cli-{{ version }}-alpha.preview-linux64 {{ PREFIX }}/bin/arduino-cli      [linux64]
+    - mv    arduino-cli-{{ version }}-alpha.preview-macosx  {{ PREFIX }}/bin/arduino-cli      [osx]
+
+    - mkdir {{ SCRIPTS }}                                                                     [win]
+    - xcopy arduino-cli-{{ version }}-alpha.preview-win     {{ SCRIPTS }}\arduino-cli.exe     [win]
+
+source:
+  url: {{ url }}/{{ version }}-alpha.preview/arduino-cli-{{ version }}-alpha.preview-linux32.tar.bz2    [linux32]
+  sha256: 6aff08736406a01fdc1eeba4ba913f33358f25264ae93599cf9114c13eb5781e                              [linux32]
+
+  url: {{ url }}/{{ version }}-alpha.preview/arduino-cli-{{ version }}-alpha.preview-linux64.tar.bz2    [linux64]
+  sha256: 0f98f2582ef8fabc139efba3ffb35d1ab90518c7b18d60aa350b4d7e9b2a6ecb                              [linux64]
+
+  url: {{ url }}/{{ version }}-alpha.preview/arduino-cli-{{ version }}-alpha.preview-macosx.zip         [osx]
+  sha256: 236e601d95fb0ec54ee5c3162be982a7b83a7d05494dc833d291f4d8ee80e143                              [osx]
+
+  url: {{ url }}/{{ version }}-alpha.preview/arduino-cli-{{ version }}-alpha.preview-win.zip            [win]
+  sha256: 32e24406b02019fa13126e8b8883f5c1c411660bf0cfc5b9c5ae9f68d54b7f6f                              [win]
+
+about:
+  home: https://github.com/arduino/arduino-cli
+  license: GPLv3
+  summary: 'A cli for arduino'
+  description: |
+    arduino-cli is an all-in-one solution that provides builder, boards/library manager, 
+    uploader, discovery and many other tools needed to use any Arduino compatible board and platforms.
+
