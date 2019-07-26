@@ -29,9 +29,9 @@ source:
   url: {{ url }}/{{ version }}-alpha.preview/arduino-cli-{{ version }}-alpha.preview-windows.zip        [win]
   sha256: 32e24406b02019fa13126e8b8883f5c1c411660bf0cfc5b9c5ae9f68d54b7f6f                              [win]
 
-tests:
+test:
   commands:
-    - arduino-cli version | grep "arduino-cli version 0.3.2-alpha.preview"    [not win]
+    - arduino-cli version
 
 about:
   home: https://github.com/arduino/arduino-cli
