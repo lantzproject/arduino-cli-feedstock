@@ -13,8 +13,10 @@ build:
     - mv    arduino-cli-{{ version }}-alpha.preview-linux64 {{ PREFIX }}/bin/arduino-cli      [linux64]
     - mv    arduino-cli-{{ version }}-alpha.preview-macosx  {{ PREFIX }}/bin/arduino-cli      [osx]
 
-    - mkdir {{ SCRIPTS }}                                                                        [win]
-    - copy arduino-cli-{{ version }}-alpha.preview-windows.exe {{ SCRIPTS }}\arduino-cli.exe     [win]
+    - mkdir {{ SCRIPTS }}                                                                     [win]
+    - copy arduino-cli-{{ version }}-alpha.preview-windows.exe {{ SCRIPTS }}\arduino-cli.exe  [win]
+
+  binary_relocation: False
 
 source:
   url: {{ url }}/{{ version }}-alpha.preview/arduino-cli-{{ version }}-alpha.preview-linux32.tar.bz2    [linux32]
